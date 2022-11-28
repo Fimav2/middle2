@@ -21,13 +21,15 @@ int itc_len_num(long long number){
 number = my_abs(number);
     int rezult;
     rezult=0;
-    while (number>0){
-        rezult = rezult +1;
+    while (number >= 0){
         number = number/10;
+        rezult = rezult + 1;
+        number = number - 1;
 }
 
     return rezult;
 }
+
 
 int itc_sum_num(long long number){
     number = my_abs(number);
