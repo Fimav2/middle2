@@ -19,12 +19,17 @@ void itc_num_print(int number){
 
 int itc_len_num(long long number){
 number = my_abs(number);
+    if (number == 0){
+        return 1;
+    }
     int rezult;
+
     rezult=0;
-    while (number >= 0){
-        number = number/10;
+    while (number > 0){
+
         rezult = rezult + 1;
-        number = number - 1;
+
+        number = number/10;
 }
 
     return rezult;
